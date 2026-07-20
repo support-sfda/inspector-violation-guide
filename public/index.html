@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>دليل تصنيف المخالفات</title><link rel="stylesheet" href="styles.css?v=2.2.8"><link rel="stylesheet" href="arabic.css?v=2.2.8"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#073b57"><title>دليل تصنيف المخالفات</title><link rel="stylesheet" href="styles.css?v=2.4.0"><link rel="stylesheet" href="arabic.css?v=2.4.0"><link rel="stylesheet" href="luxury.css?v=2.4.0"></head>
 <body>
   <header class="topbar"><div class="brand"><div class="mark">دليل</div><div><b>دليل تصنيف المخالفات</b><small>أداة ذكية مساندة للمفتش</small></div></div><span class="official">مصادر رسمية • إصدار يوليو 2026</span></header>
   <main>
@@ -8,16 +8,19 @@
       <div><span class="eyebrow">البحث الذكي في بنود المخالفات</span><h1>صِف الحالة المرصودة أثناء الزيارة التفتيشية</h1><p>اكتب وصفًا دقيقًا للحالة المرصودة، وسيحلل الدليل الوصف ويطابقه مع 1,775 بند مخالفة وفق جداول تصنيف المخالفات المعتمدة، ثم يعرض البنود الأكثر صلة.</p></div>
     </section>
     <section class="search-panel">
-      <label for="query">وصف الحالة المرصودة</label>
+      <div class="panel-heading"><div><span class="step-number">01</span><label for="query">وصف الحالة المرصودة</label></div><small>اكتب الملاحظة كما رُصدت أثناء الزيارة</small></div>
       <div class="searchbox"><textarea id="query" rows="3" placeholder="مثال: وجود منتجات منتهية الصلاحية معروضة للبيع داخل المنشأة"></textarea><button id="search">عرض المخالفات المحتملة</button></div>
       <p class="search-advisory">النتائج المعروضة استرشادية، ويجب التحقق من انطباق وصف المخالفة ومتطلباتها النظامية قبل اعتمادها.</p>
-      <div class="controls"><div id="sectors" class="chips"></div><label class="select-label">الحد الأقصى للنتائج <select id="limit"><option>5</option><option>10</option><option>20</option></select></label></div>
-      <div class="examples"><span>حالات شائعة:</span><button>عدم تسجيل درجات الحرارة في المستودع</button><button>وجود منتج غير مسجل لدى الهيئة</button><button>رفض تمكين المفتش من دخول المنشأة</button></div>
+      <div class="search-options">
+        <div class="option-block sector-options"><div class="option-title"><span class="step-number">02</span><div><b>نطاق البحث</b><small>اختر القطاع أو ابحث في جميع القطاعات</small></div></div><div id="sectors" class="chips"></div></div>
+        <div class="option-block limit-options"><div class="option-title"><span class="step-number">03</span><div><b>عدد النتائج</b><small>حدد الحد الأقصى للعرض</small></div></div><label class="select-label"><span>الحد الأقصى للنتائج</span><select id="limit" aria-label="الحد الأقصى للنتائج"><option>5</option><option>10</option><option>20</option></select></label></div>
+      </div>
+      <div class="examples"><div class="examples-heading"><span class="examples-icon">✦</span><div><b>حالات شائعة</b><small>اختر مثالًا لتجربة البحث مباشرة</small></div></div><div class="example-grid"><button>عدم تسجيل درجات الحرارة في المستودع</button><button>وجود منتج غير مسجل لدى الهيئة</button><button>رفض تمكين المفتش من دخول المنشأة</button><button>ممارسة النشاط دون ترخيص</button><button>وجود منتج منتهي الصلاحية</button></div></div>
     </section>
     <section id="status" class="status">أدخل وصف الحالة المرصودة لعرض المخالفات المحتملة</section>
     <section id="results" class="results"></section>
   </main>
   <footer><span>أداة استرشادية مساندة لا تغني عن التحقق من الوقائع والنص النظامي واعتماد المختص.</span><button id="sourcesBtn">المصادر الرسمية</button></footer>
   <dialog id="sourcesDialog"><div class="dialog-head"><h2>الجداول المعتمدة</h2><button onclick="sourcesDialog.close()">×</button></div><div id="sourceList"></div></dialog>
-  <script src="app.js?v=2.2.8"></script>
+  <script src="app.js?v=2.4.0"></script>
 </body></html>
