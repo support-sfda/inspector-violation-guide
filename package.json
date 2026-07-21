@@ -1,10 +1,10 @@
 {
   "name": "sfda-violation-classifier",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "description": "دليل استرشادي لترشيح تصنيفات مخالفات SFDA من الجداول الرسمية",
   "scripts": {
-    "build": "node build.js",
+    "build": "node -e \"const fs=require('fs');fs.rmSync('dist',{recursive:true,force:true});fs.cpSync('public','dist',{recursive:true})\"",
     "build:verified": "node scripts/verify-approved-data.js && node test/all-rows-audit.js && node build.js",
     "normalize-data": "node scripts/normalize-violations.js",
     "approve-pdf-data": "node scripts/approve-violations.js",
